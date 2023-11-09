@@ -10,5 +10,3 @@ This is my personal webpage.
 Please stay tuned to follow my works on data analytics, blog posts, and more.
 
 This is our template.
-
-\![\](<https://github.com/emu-hacettepe-analytics/emu430-fall2023-haticenurgunes/issues/1#issue-1985573458>){fig-align="left" width="50"}
