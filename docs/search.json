@@ -67,7 +67,7 @@
     "href": "assignments/assignment-1.html#athe-differences-between-r-and-python",
     "title": "Assignment",
     "section": "(a)the differences between r and python",
-    "text": "(a)the differences between r and python\n1-in r we use &lt;- symbol to assign variabes but in python we use = symbol\n\nlibrary(dslabs)\nnumber1&lt;-6\nnumber2&lt;-8\nmy_work&lt;-number1*number2\n\n\nnumber1=6\nnumber2=8\nmy_work=number1*number2\nprint(my_work)\n\n48\n\n\n2-in r index of first element is 1 but in python it is 0\n\n\nweather &lt;- c(\"sunny\", \"cloudy\", \"rainy\")\nprint(weather[2])\n\n[1] \"cloudy\"\n\n\n\nweather=[\"sunny\",\"cloudy\",\"rainy\"]\nprint(weather[2])\n\nrainy\n\n\n\n3-"
+    "text": "(a)the differences between r and python\n1-in r we use &lt;- symbol to assign variabes but in python we use = symbol\n\nlibrary(dslabs)\nnumber1&lt;-6\nnumber2&lt;-8\nmy_work&lt;-number1*number2\n\n\nnumber1=6\nnumber2=8\nmy_work=number1*number2\nprint(my_work)\n\n48\n\n\n2-in r index of first element is 1 but in python it is 0\n\n\nweather &lt;- c(\"sunny\", \"cloudy\", \"rainy\")\nprint(weather[2])\n\n[1] \"cloudy\"\n\nprint(weather[2])\n\n[1] \"cloudy\"\n\n\n\nweather=[\"sunny\",\"cloudy\",\"rainy\"]\nprint(weather[2])\n\nrainy\n\n\n\n3-"
   },
   {
     "objectID": "assignments/assignment-1.html#b",
