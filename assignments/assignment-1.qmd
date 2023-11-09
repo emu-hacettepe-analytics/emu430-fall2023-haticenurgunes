@@ -1,15 +1,53 @@
----
-title: "Assignment 1"
----
+s--- title: "Assignment 1" ---
 
-# Assignment 1
+# Assignment
+
+My first assignment has three parts.
+
+## (a)the differences between r and python
+
+1-in r we use \<- symbol to assign variabes but in python we use = symbol
 
 ```{r}
-1 + 1
+library(dslabs)
+number1<-6
+number2<-8
+my_work<-number1*number2
 ```
 
-My first assignment has two parts.
+```{python}
+number1=6
+number2=8
+my_work=number1*number2
+print(my_work)
 
-## (a)
+```
 
-## (b)
+2-in r index of first element is 1 but in python it is 0
+
+```         
+```
+
+```{r}
+weather <- c("sunny", "cloudy", "rainy")
+print(weather[2])
+```
+
+```{python}
+weather=["sunny","cloudy","rainy"]
+print(weather[2])
+```
+
+```         
+```
+
+3-
+
+## b)
+
+```{r}
+
+data('NA EXAMPLES')
+
+
+```
