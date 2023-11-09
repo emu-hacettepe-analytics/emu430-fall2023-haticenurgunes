@@ -29,7 +29,9 @@ print(my_work)
 ```
 
 ```{r}
+
 weather <- c("sunny", "cloudy", "rainy")
+print(weather[2])
 print(weather[2])
 ```
 
