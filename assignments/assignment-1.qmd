@@ -4,9 +4,11 @@ s--- title: "Assignment 1" ---
 
 My first assignment has three parts.
 
-## (a)the differences between r and python
+## a)
 
-1-in r we use \<- symbol to assign variabes but in python we use = symbol
+## b)the differences between r and python
+
+### 1-in r we use \<- symbol to assign variables but in python we use = symbol
 
 ```{r}
 library(dslabs)
@@ -23,7 +25,7 @@ print(my_work)
 
 ```
 
-2-in r index of first element is 1 but in python it is 0
+### 2-in r index of first element is 1 but in python it is 0
 
 ```         
 ```
@@ -43,13 +45,40 @@ print(weather[2])
 ```         
 ```
 
-3-
+### 3-use of for lop
 
-## b)
+```{r}
+for (i in 4:9) {
+  print(i)
+}
+```
+
+```{python}
+for i in range(4, 9):
+    print(i)
+```
+
+## c)
 
 ```{r}
 
-data('NA EXAMPLES')
+
+library(dslabs)
+data("na_example")
+print(na_example)
+
+
+print( sum(is.na(na_example)))
+
+
+na_example_vl <- na_example
+na_example_vl[is.na(na_example_vl)] <- 0
+
+
+na_example_vl
+
+sum(is.na(na_example_vl))
+
 
 
 ```
