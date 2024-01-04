@@ -5,5 +5,67 @@ title: "Assignment 2"
 # Assignment 2
 
 ```{r}
-1 + 1
+install.packages("rvest") 
+library(tidyverse)
+library(rvest)
+library(knitr)
+library(ggplot2)
+library(stringr)
+
+base_url <- "https://m.imdb.com/search/title/?num_votes=2500,&countries=TR" 
+url_2010_to_2023 <- paste0(base_url, "https://m.imdb.com/search/title/?release_date=2010-01-01,2023-12-31&num_votes=2500,&countries=TR") 
+url_before_2010 <- paste0(base_url, "https://m.imdb.com/search/title/?release_date=,2010-01-01&num_votes=2500,&countries=TR")
+
+url<-c(url_2010_to_2023,url_before_2010)
+
+title1 <- url_before2010 %>% html_nodes('.ipc-title__text') %>% html_text() 
+title1 <- tail(head(url_before2010,-1)-1) 
+title1<-strsplit(titles,"",n=2) 
+title1 <-unlist(lapply((title1 , function(x) {x[2]})))
+
+year1<-url_before2010 %>% html_nodes('.dli-title-metadata-item:nth-child(1)') %>% html_text 
+year1<- as.numeric(year1)
+
+duration1<-url_before2010 %>% html_nodes('.dli-title-metadata-item:nth-child(2)') %>% html_text duration1<-sapply(strsplit(duration1, " "), function(x) as.numeric(x[1]) * 60 + as.numeric(x[2]))
+
+rating1<- url_before2010 %>%html_nodes('.ratingGroup--imdb-rating') %>% html_text 
+rating1<-as.numeric(rating1)
+
+vote1<-url_before2010 %>% html_nodes('.kRnqtn') %>% html_text 
+vote1 <- sub("[^0-9]", "", vote1) 
+vote1 <- as.numeric(vote1)
+
+title2 <- url_after2010 %>% html_nodes('.ipc-title__text') %>% html_text() 
+title2 <- tail(head(url_after2010,-1)-1) 
+title2<-strsplit(title2,"",n=2) 
+title2<-unlist(lapply((title2,function(x) x[2])))
+
+year2<-url_after2010 %>% html_nodes('.dli-title-metadata-item:nth-child(1)') %>% html_text 
+year2<-as.numeric(year2)
+
+duration2<-url_after2010 %>% html_nodes('.dli-title-metadata-item:nth-child(2)') %>% html_text duration2<-sapply(strsplit(duration2, " "), function(x) as.numeric(x[1]) * 60 + as.numeric(x[2]))
+
+rating2<- url_after2010 %>%html_nodes('.ratingGroup--imdb-rating') %>% html_text 
+rating2<-as.numeric(rating2)
+
+vote2<-url_after2010 %>% html_nodes('.kRnqtn') %>% html_text 
+vote2 <- sub("[^0-9]", "", vote2)
+vote2 <- as.numeric(vote2) 
+titles<-c(title1,title2) 
+years<-c(year1.year2) 
+durations<-c(duration1,duration2) 
+rates<-c(rating1,rating2) 
+votes<-c(vote1,vote2)
+
+movies_data<-data.frame(titles,years,durations,rates,votes)
+
+top_5_movies <- movies_data %>% arrange(desc(rates)) %>% head(5) bottom_5_movies <- movies_data %>% arrange(rates) %>% head(5) 
+print("best 5 movies") 
+print(top_5_movies)
+
+print("worst 5 movies") 
+print(bottom_5_movies)
+
+favorite_movies <- movie_data %>% filter(Title %in% c("Yedinci Kogustaki Mucize", "Ayla"))  
+print(favorite_movies)
 ```
